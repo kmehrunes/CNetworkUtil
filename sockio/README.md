@@ -12,7 +12,7 @@ void blocking_tcp ()
     Server server = prepare_tcp_server(port);
     server = start_tcp_server(server, client_handler, client_err);
 
-    if (srv.state == SRV_ERROR) // check if it exited with an error
+    if (server.state == SRV_ERROR) // check if it exited with an error
         printf("An error occurred: %d\n", server.err);
     printf("Done\n");
 }
